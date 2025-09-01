@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js" />
+    <link rel="stylesheet" href="inicial.js" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>Inova Transportes</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo"
+          ><img src="img/logotipo.png" alt="logo"
+        /></a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="empresa.html" class="nav-link">Empresa</a>
+          </li>
+          <li class="nav-item">
+            <a href="servicos.html" class="nav-link">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a href="estrutura.html" class="nav-link">Estrutura</a>
+          </li>
+          <li class="nav-item">
+            <a href="atuacao.html" class="nav-link">Atuação</a>
+          </li>
+          <li class="nav-item">
+            <a href="contato.html" class="nav-link">Contato</a>
+          </li>
+        </ul>
+        <div class="hamburguer">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main_estrutura">
+      <div class="estrutura">
+        <div class="estrutura_image">
+          <img src="images/index9.jpeg" alt="estrutura" />
+        </div>
+        <div class="text_est">
+          <h1>ESTRUTURA</h1>
+          <p>
+            Temos o compromisso de propiciar o melhor custo-benefício aos nossos
+            clientes e para isso buscamos otimizar nossos serviços.
+          </p>
+          <ul>
+            <li>
+              <span>Sistema de Gestão –</span> permite um acompanhamento
+              constante dos serviços.
+            </li>
+            <li>
+              <span>Sistema de Gerenciamento de Risco –</span> realizado através
+              da consulta e liberação de motoristas, antes do carregamento da
+              carga.
+            </li>
+            <li>
+              <span>Seguro de Carga –</span> possuímos seguro AIG para a carga
+              no valor de R$1.200.000,00.
+            </li>
+            <li>
+              <span>Armazenagem de carga –</span> de acordo com a necessidade do
+              cliente.
+            </li>
+            <li>
+              <span>CTE Eletrônico –</span> Conhecimento de Transporte
+              Eletrônico.
+            </li>
+            <li><span>NFS de Serviço –</span> Nota Fiscal de Serviços.</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+
+    <div class="fleet">
+      <div class="larg_fleet">
+        <div class="image-fleet">
+          <img src="images/index5.jpeg" alt="caminhao" />
+        </div>
+        <div class="fleet-text">
+          <h2>Nossa Frota</h2>
+          <p>
+            O transporte de cargas em geral é realizado através da nossa frota
+            própria e agregados contando com profissionais experientes e
+            qualificados. Toda frota é monitorada eletronicamente. Entre os
+            veículos disponíveis, contamos com:
+          </p>
+          <div class="list_column">
+            <ul>
+              <li>TRUCK ABERTO;</li>
+              <li>TOCO;</li>
+              <li>GRANELEIRA;</li>
+              <li>SIDERS;</li>
+            </ul>
+            <ul>
+              <li>TRUCK BAÚ;</li>
+              <li>CARRETA ABERTA;</li>
+              <li>CARRETA BAÚ;</li>
+              <li>ENTRE OUTROS...</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="footer">
+      <div class="footer-content">
+        <img src="img/logotipo.png" alt="logo" />
+        <p>Nos siga em todas as redes sociais.</p>
+        <div class="icons">
+          <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-content">
+        <h4>NAVEGAÇÃO</h4>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="empresa.html">Empresa</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="estrutura.html">Estrutura</a></li>
+        <li><a href="atuacao.html">Área de Atuação</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </div>
+
+      <div class="footer-content">
+        <h4>COTAÇÃO DE FRETE</h4>
+        <p>
+          Estamos prontos para oferecer a solução para o transporte da sua
+          carga.
+        </p>
+        <p>
+          Entre em contato e iremos enviar uma proposta ideal para sua empresa.
+        </p>
+        <a href="contato.html">Clique Aqui.</a>
+      </div>
+      <div class="footer-content">
+        <h4>LOCALIZAÇÃO</h4>
+        <div class="footer-text-min">
+          <p>Av. das Indústrias, 1600 - Conj. 215</p>
+          <p>Distrito Industrial – Cachoeirinha – RS</p>
+          <p>CEP 94930-230</p>
+          <a href="#">inova@inovatransportes.com.br</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const menuButton = document.querySelector(".menu-button");
+
+      menuButton.addEventListener("click", () => {
+        navbar.classList.toggle("show-menu");
+      });
+    </script>
+    <script src="inicial.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

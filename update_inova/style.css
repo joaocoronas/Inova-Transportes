@@ -1,0 +1,1273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-image: url(img/fundo-site.gif);
+}
+
+/* REGRAS GLOBAIS PARA IMAGENS RESPONSIVAS */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+header {
+  width: 100%;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 34px;
+  background-color: #111c24;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  border-top: 4px solid #edb700;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.navbar.rolagem {
+  background: rgba(17, 28, 36, 0.9);
+  border-top: none;
+}
+
+.nav-link {
+  transition: 0.5s ease;
+  border: 2px solid rgba(0, 0, 0, 0);
+  padding: 30px 0px;
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #edb700;
+  color: #edb700;
+}
+
+/* HAMBURGUER */
+
+.hamburguer {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  margin: 5px auto;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* HAMBURGUER */
+
+/* CAROSEL */
+
+.slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  border-bottom: 2px solid #edb700;
+  margin-top: 100px;
+  position: relative;
+  background-color: #111c24; /* Cor da navbar nas laterais */
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 1s;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111c24; /* Cor da navbar como fundo */
+}
+
+.slide img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.manual-navigation {
+  position: absolute;
+  width: 100%;
+  bottom: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  z-index: 10;
+}
+
+.manual-btn {
+  width: 14px;
+  height: 14px;
+  border: 3px solid rgba(237, 183, 0, 0.8);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+}
+
+.manual-btn:hover {
+  background-color: rgba(237, 183, 0, 0.9);
+  border-color: #fff;
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(237, 183, 0, 0.5);
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -75%;
+}
+
+.navigation-auto div {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(237, 183, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.navigation-auto {
+  position: absolute;
+  width: 100%;
+  bottom: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  z-index: 5;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background-color: rgba(237, 183, 0, 0.8);
+  border-color: #fff;
+  transform: scale(1.1);
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background-color: rgba(237, 183, 0, 0.8);
+  border-color: #fff;
+  transform: scale(1.1);
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background-color: rgba(237, 183, 0, 0.8);
+  border-color: #fff;
+  transform: scale(1.1);
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background-color: rgba(237, 183, 0, 0.8);
+  border-color: #fff;
+  transform: scale(1.1);
+}
+
+/* CAROSEL */
+
+/* CARDS MAIN */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid #edb700;
+}
+
+/* Card */
+.card {
+  width: 200px;
+  height: 400px;
+  margin: 50px 0px 100px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+  transition: 0.3s;
+  border-bottom: 2px solid #edb700;
+  border-top: 2px solid #edb700;
+}
+
+/* Card Body */
+.card-body {
+  height: 170px;
+  padding: 15px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-local {
+  font-size: 25px;
+  margin: 10px 0;
+  text-align: center;
+  border-bottom: 2px solid #111c24;
+}
+
+.card-texto {
+  font-size: 17px;
+  margin: 30px auto;
+}
+
+/* Card Footer */
+.card-footer {
+  margin-top: 150px;
+  text-align: center;
+  background-color: #000;
+}
+
+.card-footer a {
+  color: #fff;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+/* Cores Cards */
+.card-1 .card-footer {
+  background-color: #111c24;
+}
+
+.card-1 .card-local {
+  color: #111c24;
+}
+
+.card-2 .card-footer {
+  background-color: #111c24;
+}
+
+.card-2 .card-local {
+  color: #111c24;
+}
+
+.card-3 .card-footer {
+  background-color: #111c24;
+}
+
+.card-3 .card-local {
+  color: #111c24;
+}
+
+.card-4 .card-footer {
+  background-color: #111c24;
+}
+
+/* Animação Hover */
+.card:hover {
+  cursor: pointer;
+  background-color: #ffec74;
+}
+
+/* CARDS MAIN */
+
+/* FLEET */
+
+.fleet {
+  width: 100%;
+  border-bottom: 2px solid #edb700;
+  margin-top: 20px;
+}
+
+.larg_fleet {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 30px;
+  padding: 0 50px;
+}
+
+.image-fleet {
+  flex: 1;
+  max-width: 500px;
+  position: relative; /* igual à empresa_image */
+}
+
+.image-fleet img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-fleet img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.image-fleet::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 42, 69, 0.1),
+    rgba(237, 183, 0, 0.05)
+  );
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.fleet-text {
+  flex: 1;
+  font-size: 17px;
+  min-width: 300px;
+}
+
+.fleet-text h2 {
+  color: #111c24;
+  margin-bottom: 20px;
+}
+
+.fleet-text p {
+  margin-bottom: 20px;
+  line-height: 24px;
+}
+
+.fleet-column li {
+  display: list-item;
+}
+
+.list_column {
+  display: flex;
+  gap: 60px;
+  font-size: 18px;
+  color: #111c24;
+  line-height: 24px;
+  flex-wrap: wrap;
+}
+/* FLEET */
+
+/* FOOTER */
+.footer {
+  display: flex !important;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 80px 13% 70px;
+  background: #111c24;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.footer-content {
+  flex: 1;
+  min-width: 200px;
+  margin-right: 2rem;
+}
+
+.footer-content:last-child {
+  margin-right: 0;
+}
+
+.footer-content img {
+  max-width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer-content h4 {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 20px;
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-content li {
+  margin-bottom: 16px;
+}
+
+.footer-content li a {
+  display: block;
+  color: #d6d6d6;
+  font-size: 15px;
+  font-weight: 400;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.footer-content li a:hover {
+  transform: translateY(-3px) translateX(-5px);
+  color: #fff;
+}
+
+.footer-content p {
+  color: #d6d6d6;
+  font-size: 16px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.footer-content a {
+  color: #edb700;
+  text-decoration: none;
+}
+
+.footer-text-min {
+  font-size: 14px;
+}
+
+.footer-text-min a {
+  color: #fff;
+}
+
+.footer-text-min a:hover {
+  color: #edb700;
+}
+
+.icons a {
+  display: inline-block;
+  font-size: 22px;
+  color: #d6d6d6;
+  margin-right: 17px;
+  transition: all 0.4s ease;
+  text-decoration: none;
+}
+
+.icons a:hover {
+  color: #fff;
+  transform: translateY(-5px);
+}
+/* FOOTER */
+
+/********************************************/
+
+/* EMPRESA */
+
+.main_empresa {
+  margin-top: 120px;
+  padding: 60px 120px 30px 120px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  min-height: 600px;
+}
+
+.empresa_paragrafos {
+  flex: 1.2;
+  line-height: 28px;
+  font-size: 17px;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.empresa_paragrafos h1 {
+  color: #111c24;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.empresa_paragrafos h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #edb700, #ffd700);
+  border-radius: 2px;
+}
+
+.empresa_paragrafos p {
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #333;
+  line-height: 1.7;
+}
+
+.empresa_paragrafos p:first-of-type {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111c24;
+}
+
+.empresa_image {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.empresa_image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.empresa_image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.empresa_image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 42, 69, 0.1),
+    rgba(237, 183, 0, 0.05)
+  );
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.main_list_empresa {
+  display: flex;
+  padding: 60px 120px 30px 120px;
+  gap: 30px;
+}
+
+.title_missao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.title_visao {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.title_valores {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.missao_empresa {
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.visao_empresa {
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+.valores_empresa {
+  flex: 1;
+  padding-bottom: 30px;
+}
+
+/* EMPRESA */
+
+/* SERVIÇOS */
+
+.main_servicos {
+  margin-top: 120px;
+  padding: 60px 120px 10px 120px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  min-height: 600px;
+}
+
+.servicos_paragrafos {
+  flex: 1.2;
+  line-height: 28px;
+  font-size: 17px;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.servicos_paragrafos h1 {
+  color: #111c24;
+  margin-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.servicos_paragrafos h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #edb700, #ffd700);
+  border-radius: 2px;
+}
+
+.servicos_paragrafos p {
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #333;
+  line-height: 1.7;
+}
+
+.servicos_paragrafos p:first-of-type {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111c24;
+}
+
+.servicos_image {
+  flex: 1;
+  max-width: 500px;
+  position: relative; /* igual à empresa_image */
+}
+
+.servicos_image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicos_image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.servicos_image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 42, 69, 0.1),
+    rgba(237, 183, 0, 0.05)
+  );
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.main_text_servicos {
+  padding: 60px 120px 30px 120px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  min-height: 600px;
+}
+
+.text_ser {
+  flex: 1.2;
+  line-height: 28px;
+  font-size: 17px;
+  min-width: 300px;
+  padding-right: 20px;
+}
+
+.text_ser h2 {
+  color: #111c24;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  position: relative;
+}
+
+.text_ser h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #edb700, #ffd700);
+  border-radius: 2px;
+}
+
+.text_ser p {
+  margin-bottom: 25px;
+  text-align: justify;
+  color: #333;
+  line-height: 1.7;
+}
+
+.text_ser p:first-of-type {
+  font-size: 18px;
+  font-weight: 500;
+  color: #111c24;
+}
+
+.text_ser a {
+  text-decoration: none;
+  color: #111c24;
+  font-size: 18px;
+}
+
+.text_ser a:hover {
+  color: #edb700;
+}
+
+/* SERVIÇOS */
+
+/* ESTRUTURA */
+
+.main_estrutura {
+  width: 100%;
+  margin-top: 100px;
+  border-bottom: 2px solid #edb700;
+}
+
+.estrutura {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  justify-content: center;
+}
+
+.estrutura_image {
+  flex: 1;
+  max-width: 500px;
+  position: relative; /* igual à empresa_image */
+}
+
+.estrutura_image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.estrutura_image img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.estrutura_image::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 42, 69, 0.1),
+    rgba(237, 183, 0, 0.05)
+  );
+  border-radius: 15px;
+  z-index: -1;
+}
+
+.text_est {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text_est h1 {
+  color: #111c24;
+  margin-bottom: 20px;
+}
+
+.text_est p {
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+
+.text_est ul li span {
+  color: #111c24;
+  font-size: 18px;
+}
+
+.text_est ul li {
+  font-size: 17px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+/* ESTRUTURA */
+
+/* ATUAÇÃO */
+
+.main_atuacao {
+  width: 100%;
+}
+
+.atuacao {
+  display: flex;
+  margin-top: 130px;
+  margin-bottom: 20px;
+  align-items: center;
+  gap: 30px;
+  padding: 0 50px;
+}
+
+.text_atuacao {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text_atuacao h1 {
+  margin-bottom: 40px;
+  color: #111c24;
+}
+
+.text_atuacao p {
+  margin-bottom: 40px;
+  font-size: 17px;
+}
+
+.text_atuacao button {
+  background: #111c24;
+  color: #fff;
+  padding: 20px;
+  border-bottom: 2px solid #edb700;
+  border-radius: 10px;
+  font-size: 19px;
+}
+
+.text_atuacao button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.text_atuacao button:hover {
+  border: 2px solid #edb700;
+  cursor: pointer;
+  background: #edb700;
+}
+
+.text_atuacao span {
+  color: #edb700;
+}
+
+.image_atuacao {
+  flex: 1;
+  max-width: 600px;
+}
+
+.image_atuacao img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ATUAÇÃO */
+
+/* CONTATO */
+
+.main-help-contato {
+  margin-top: 125px;
+  margin-left: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Estilos específicos para seções de contato */
+.contato-section {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 45px;
+  width: 500px;
+  background-color: #111c24;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.contato-section h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 2rem;
+}
+
+.contato-section form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contato-section label {
+  color: #fff;
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+.contato-section input {
+  padding: 15px;
+  outline: none;
+  border: 0;
+  margin-bottom: 20px;
+  font-size: 15px;
+  transition: all 0.5s;
+}
+
+.contato-section form input:focus {
+  border-radius: 10px;
+}
+
+.contato-section form textarea {
+  padding: 10px;
+  outline: none;
+  border: 0;
+  font-size: 15px;
+  margin-bottom: 30px;
+  transition: all 0.5s;
+}
+
+.contato-section form textarea:focus {
+  border-radius: 10px;
+}
+
+.contato-section form button {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  transition: all 1s;
+  margin-bottom: 20px;
+}
+
+.contato-section form button:hover {
+  color: #111c24;
+  background-color: #edb700;
+  border-radius: 10px;
+}
+
+/* CONTATO */
+
+/* MATRIZ */
+
+.text_help_contato {
+  flex: 1;
+  padding: 50px;
+}
+
+.ul_help {
+  list-style: none;
+  margin-top: 15px;
+  font-size: 17px;
+}
+
+.bx {
+  color: #edb700;
+  margin-bottom: 30px;
+}
+
+.ul_help a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.ul_help a:hover {
+  color: #edb700;
+}
+
+/* MATRIZ */
+
+/* MEDIA QUERIES RESPONSIVAS */
+
+@media (max-width: 1200px) {
+  .main_empresa,
+  .main_list_empresa,
+  .main_servicos,
+  .main_text_servicos,
+  .estrutura {
+    padding: 30px;
+  }
+
+  .larg_fleet {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .logo img {
+    width: 200px;
+  }
+
+  .hamburguer {
+    display: block;
+  }
+
+  .hamburguer.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburguer.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburguer.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    z-index: 2;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 83px;
+    gap: 0;
+    border-radius: 0 0 20px 20px;
+    background: rgba(17, 28, 36, 0.9);
+    text-align: center;
+    flex-direction: column;
+    width: 100%;
+    transition: 0.3s;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .slider {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .container {
+    width: 100%;
+    display: flex;
+  }
+
+  /* Fleet responsivo */
+  .larg_fleet {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .image-fleet,
+  .fleet-text {
+    max-width: 100%;
+  }
+
+  .list_column {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer responsivo */
+  .footer {
+    flex-direction: column !important;
+    padding: 40px 5% 35px !important;
+  }
+
+  .footer-content {
+    margin-right: 0 !important;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  /* Contato responsivo */
+  .contato-section {
+    padding: 50px 5% 40px;
+  }
+
+  .main-help-contato {
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .contato-section {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  /* Empresa responsivo */
+  .main_empresa {
+    flex-direction: column;
+    padding: 40px 30px;
+    margin-top: 100px;
+    text-align: center;
+    min-height: auto;
+  }
+
+  .empresa_paragrafos {
+    margin-bottom: 40px;
+    padding-right: 0;
+  }
+
+  .empresa_paragrafos h1 {
+    font-size: 2.2rem;
+  }
+
+  .empresa_image {
+    max-width: 100%;
+  }
+
+  .main_list_empresa {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  /* Serviços responsivo */
+  .main_servicos,
+  .main_text_servicos {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .servicos_paragrafos h1 {
+    font-size: 2rem;
+  }
+
+  .servicos_paragrafos h2,
+  .text_ser h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Estrutura responsivo */
+  .estrutura {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  /* Atuação responsivo */
+  .atuacao {
+    flex-direction: column;
+    padding: 0 20px;
+    margin-top: 100px;
+  }
+
+  .text_atuacao {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes adicionais para telas menores */
+  .slider {
+    height: 300px;
+    margin-top: 90px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Textos menores em mobile */
+  .servicos_paragrafos h1,
+  .text_est h1,
+  .text_atuacao h1 {
+    font-size: 1.8rem;
+  }
+
+  .servicos_paragrafos h2,
+  .text_ser h2 {
+    font-size: 1.3rem;
+  }
+
+  .text_help_contato {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas muito pequenas */
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .slider {
+    height: 250px;
+    margin-top: 85px;
+  }
+
+  .main_empresa,
+  .main_servicos,
+  .main_text_servicos,
+  .estrutura,
+  .atuacao {
+    padding: 20px 10px;
+  }
+
+  .contato-section {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+
+  .contato-section h2 {
+    font-size: 2rem;
+  }
+}
